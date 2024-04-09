@@ -1,10 +1,11 @@
-package com.tour.events.infraestructure.repositories;
+package com.tour.events.infraestructure;
 
 import com.tour.events.domain.dto.EventDto;
 import com.tour.events.domain.repository.EventDtoRepository;
 import com.tour.events.infraestructure.entities.Event;
 import com.tour.events.infraestructure.entities.Ticket;
 import com.tour.events.infraestructure.mapper.EventMapper;
+import com.tour.events.infraestructure.repositories.EventCrudRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
