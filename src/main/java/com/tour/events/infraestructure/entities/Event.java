@@ -1,8 +1,6 @@
 package com.tour.events.infraestructure.entities;
 
 import jakarta.persistence.*;
-
-import java.text.DateFormat;
 import java.util.Date;
 
 @Entity
@@ -19,13 +17,14 @@ public class Event {
     @Column(name = "age_restriction")
     private Integer ageRestriction;
     private Integer capacity;
+    private Integer availability;
     private String type;
     private String city;
     private String address;
     @Column(name = "created_at")
-    private DateFormat createdAt;
+    private Date createdAt;
     @Column(name = "updated_at")
-    private DateFormat updatedAt;
+    private Date updatedAt;
 
     // Getters y setters
 
@@ -93,6 +92,14 @@ public class Event {
         this.capacity = capacity;
     }
 
+    public Integer getAvailability() {
+        return availability;
+    }
+
+    public void setAvailability(Integer availability) {
+        this.availability = availability;
+    }
+
     public String getType() {
         return type;
     }
@@ -117,19 +124,19 @@ public class Event {
         this.address = address;
     }
 
-    public DateFormat getCreatedAt() {
+    public Date getCreatedAt() {
         return createdAt;
     }
 
-    public void setCreatedAt(DateFormat createdAt) {
+    public void setCreatedAt(Date createdAt) {
         this.createdAt = createdAt;
     }
 
-    public DateFormat getUpdatedAt() {
+    public Date getUpdatedAt() {
         return updatedAt;
     }
 
-    public void setUpdatedAt(DateFormat updatedAt) {
+    public void setUpdatedAt(Date updatedAt) {
         this.updatedAt = updatedAt;
     }
 }
