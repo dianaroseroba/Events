@@ -14,25 +14,26 @@ import java.util.Optional;
 public interface EventMapper {
 
     @Mappings({
-            @Mapping(source = "id",  target = "id"),
-            @Mapping(source = "name",  target = "name"),
-            @Mapping(source = "description",  target = "description"),
-            @Mapping(source = "location",  target = "location"),
-            @Mapping(source = "start",  target = "start"),
-            @Mapping(source = "finish",  target = "finish"),
-            @Mapping(source = "ageRestriction",  target = "ageRestriction"),
-            @Mapping(source = "capacity",  target = "capacity"),
-            @Mapping(source = "type",  target = "type"),
-            @Mapping(source = "city",  target = "city"),
-            @Mapping(source = "address",  target = "address"),
-            @Mapping(source = "createdAt",  target = "createdAt"),
-            @Mapping(source = "updatedAt",  target = "updatedAt"),
+            @Mapping(source = "id",  target = "idDto"),
+            @Mapping(source = "name",  target = "nameDto"),
+//            @Mapping(source = "description",  target = "description"),
+            @Mapping(source = "location",  target = "locationDto"),
+            @Mapping(source = "start",  target = "startDto"),
+            @Mapping(source = "finish",  target = "finishDto"),
+//            @Mapping(source = "ageRestriction",  target = "ageRestriction"),
+//            @Mapping(source = "capacity",  target = "capacity"),
+            @Mapping(source = "availability", target = "availabilityDto")
+//            @Mapping(source = "type",  target = "type"),
+//            @Mapping(source = "city",  target = "city"),
+//            @Mapping(source = "address",  target = "address"),
+//            @Mapping(source = "createdAt",  target = "createdAt"),
+//            @Mapping(source = "updatedAt",  target = "updatedAt"),
     })
     EventDto toEventDto(Event event);
 
-    List<EventDto> toEvents(List<Event> events);
+    List<EventDto> toEventsDto(List<Event> events);
 
-    default Optional<EventDto> toEventsOptional(Optional<Event> event){
+    default Optional<EventDto> toEventsDtoOptional(Optional<Event> event){
         return event.map(this::toEventDto);
     }
     @InheritInverseConfiguration

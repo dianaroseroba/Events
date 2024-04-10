@@ -1,62 +1,61 @@
 package com.tour.events.domain.dto;
 
-import java.text.DateFormat;
 import java.util.Date;
 
 public class EventDto {
 
-    private int id;
-    private String name;
-    private String location;
-    private Date start;
-    private Date finish;
-    private Integer availability;
+    private int idDto;
+    private String nameDto;
+    private String locationDto;
+    private Date startDto;
+    private Date finishDto;
+    private Integer availabilityDto;
 
-    public int getId() {
-        return id;
+    public int getIdDto() {
+        return idDto;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setIdDto(int idDto) {
+        this.idDto = idDto;
     }
 
-    public String getName() {
-        return name;
+    public String getNameDto() {
+        return nameDto;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNameDto(String nameDto) {
+        this.nameDto = nameDto;
     }
 
-    public String getLocation() {
-        return location;
+    public String getLocationDto() {
+        return locationDto;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
+    public void setLocationDto(String locationDto) {
+        this.locationDto = locationDto;
     }
 
-    public Date getStart() {
-        return start;
+    public Date getStartDto() {
+        return startDto;
     }
 
-    public void setStart(Date start) {
-        this.start = start;
+    public void setStartDto(Date startDto) {
+        this.startDto = startDto;
     }
 
-    public Date getFinish() {
-        return finish;
+    public Date getFinishDto() {
+        return finishDto;
     }
 
-    public void setFinish(Date finish) {
-        this.finish = finish;
+    public void setFinishDto(Date finishDto) {
+        this.finishDto = finishDto;
     }
 
-    public Integer getAvailability() {
-        return availability;
+    public Integer getAvailabilityDto() {
+        return availabilityDto;
     }
 
-    public void setAvailability(Integer availability) {
-        this.availability = availability;
+    public void setAvailabilityDto(Integer availabilityDto) {
+        this.availabilityDto = availabilityDto;
     }
 }

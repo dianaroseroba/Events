@@ -8,7 +8,5 @@ import java.util.Optional;
 public interface EventDtoRepository {
     List<EventDto> getAll();
     Optional<EventDto> getById(long idEventDto);
-
-    void deleteByID(long idEventDto);
     EventDto save(EventDto ticketDto);
 }
