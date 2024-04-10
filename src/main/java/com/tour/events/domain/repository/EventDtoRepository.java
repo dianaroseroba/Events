@@ -1,7 +1,6 @@
 package com.tour.events.domain.repository;
 
 import com.tour.events.domain.dto.EventDto;
-import com.tour.events.domain.dto.TicketDto;
 
 import java.util.List;
 import java.util.Optional;

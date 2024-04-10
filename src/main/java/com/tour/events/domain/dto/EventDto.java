@@ -7,17 +7,10 @@ public class EventDto {
 
     private int id;
     private String name;
-    private String description;
     private String location;
     private Date start;
     private Date finish;
-    private Integer ageRestriction;
-    private Integer capacity;
-    private String type;
-    private String city;
-    private String address;
-    private DateFormat createdAt;
-    private DateFormat updatedAt;
+    private Integer availability;
 
     public int getId() {
         return id;
@@ -33,14 +26,6 @@ public class EventDto {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 
     public String getLocation() {
@@ -67,59 +52,11 @@ public class EventDto {
         this.finish = finish;
     }
 
-    public Integer getAgeRestriction() {
-        return ageRestriction;
+    public Integer getAvailability() {
+        return availability;
     }
 
-    public void setAgeRestriction(Integer ageRestriction) {
-        this.ageRestriction = ageRestriction;
-    }
-
-    public Integer getCapacity() {
-        return capacity;
-    }
-
-    public void setCapacity(Integer capacity) {
-        this.capacity = capacity;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public DateFormat getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(DateFormat createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    public DateFormat getUpdatedAt() {
-        return updatedAt;
-    }
-
-    public void setUpdatedAt(DateFormat updatedAt) {
-        this.updatedAt = updatedAt;
+    public void setAvailability(Integer availability) {
+        this.availability = availability;
     }
 }
