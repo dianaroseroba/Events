@@ -6,85 +6,85 @@ import java.text.DateFormat;
 
 public class TicketDto {
 
-    private int id;
-    private Boolean status;
-    private String type;
-    private Float price;
-    private Integer number;
-    private Boolean presale;
-    private DateFormat createdAt;
-    private DateFormat updatedAt;
-    private Event event;
+    private int idDto;
+    private Boolean statusDto;
+    private String typeDto;
+    private Float priceDto;
+    private Integer numberDto;
+    private Boolean presaleDto;
+    private DateFormat createdAtDto;
+    private DateFormat updatedAtDto;
+    private Event eventDto;
 
     public int getId() {
-        return id;
+        return idDto;
     }
 
     public void setId(int id) {
-        this.id = id;
+        this.idDto = idDto;
     }
 
     public Boolean getStatus() {
-        return status;
+        return statusDto;
     }
 
     public void setStatus(Boolean status) {
-        this.status = status;
+        this.statusDto = statusDto;
     }
 
     public String getType() {
-        return type;
+        return typeDto;
     }
 
     public void setType(String type) {
-        this.type = type;
+        this.typeDto = typeDto;
     }
 
     public Float getPrice() {
-        return price;
+        return priceDto;
     }
 
     public void setPrice(Float price) {
-        this.price = price;
+        this.priceDto = priceDto;
     }
 
     public Integer getNumber() {
-        return number;
+        return numberDto;
     }
 
     public void setNumber(Integer number) {
-        this.number = number;
+        this.numberDto = numberDto;
     }
 
     public Boolean getPresale() {
-        return presale;
+        return presaleDto;
     }
 
     public void setPresale(Boolean presale) {
-        this.presale = presale;
+        this.presaleDto = presaleDto;
     }
 
     public DateFormat getCreatedAt() {
-        return createdAt;
+        return createdAtDto;
     }
 
     public void setCreatedAt(DateFormat createdAt) {
-        this.createdAt = createdAt;
+        this.createdAtDto = createdAtDto;
     }
 
     public DateFormat getUpdatedAt() {
-        return updatedAt;
+        return updatedAtDto;
     }
 
-    public void setUpdatedAt(DateFormat updatedAt) {
-        this.updatedAt = updatedAt;
+    public void setUpdatedAt(DateFormat updatedAtDto) {
+        this.updatedAtDto = updatedAtDto;
     }
 
     public Event getEvent() {
-        return event;
+        return eventDto;
     }
 
     public void setEvent(Event event) {
-        this.event = event;
+        this.eventDto = eventDto;
     }
 }
