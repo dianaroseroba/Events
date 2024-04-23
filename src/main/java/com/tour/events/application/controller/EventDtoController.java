@@ -1,6 +1,7 @@
 package com.tour.events.application.controller;
 
 import com.tour.events.domain.dto.EventDto;
+import com.tour.events.domain.dto.EventSaveDto;
 import com.tour.events.domain.service.EventDtoService;
 import org.mapstruct.Mapping;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,8 +31,17 @@ public class EventDtoController {
         return eventDtoService.getByID(eventDtoID);
     }
 
-    @PostMapping()
-    public EventDto save(@RequestBody EventDto eventDto){
-        return eventDtoService.save(eventDto);
+    @GetMapping("/city")
+    public List<EventDto> getByCity(@RequestParam String city){
+        return eventDtoService.getByCity(city);
+    }
+
+    @GetMapping("/name")
+    public List<EventDto> getByNAme(@RequestParam String name){
+        return eventDtoService.getByName(name);
+    }
+
+    public EventSaveDto save(@RequestBody EventSaveDto eventSaveDto){
+        return eventDtoService.save(eventSaveDto);
     }
 }

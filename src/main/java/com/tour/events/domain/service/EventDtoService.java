@@ -1,6 +1,7 @@
 package com.tour.events.domain.service;
 
 import com.tour.events.domain.dto.EventDto;
+import com.tour.events.domain.dto.EventSaveDto;
 import com.tour.events.domain.repository.EventDtoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -18,12 +19,24 @@ public class EventDtoService {
     public List<EventDto> getAll(){
         return eventRepo.getAll();
     }
+    public List<EventDto> getByCity(String eventDtoCity){
+        List<EventDto> events = eventRepo.getByCity(eventDtoCity);
+        return eventRepo.getByCity(eventDtoCity);
+    }
+
+    public List<EventDto> getByName(String eventDtoName){
+        List<EventDto> events = eventRepo.getByName(eventDtoName);
+        return eventRepo.getByName(eventDtoName);
+    }
 
     public Optional<EventDto> getByID(int eventDtoID){
         return eventRepo.getById(eventDtoID);
     }
 
-    public EventDto save(EventDto eventDto){
-        return eventRepo.save(eventDto);
+//    public EventDto save(EventDto eventDto){
+//        return eventRepo.save(eventDto);
+//    }
+    public EventSaveDto save(EventSaveDto eventSaveDto){
+        return eventRepo.save(eventSaveDto);
     }
 }

@@ -10,11 +10,11 @@ public class Ticket {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private Boolean status;
-    private String type;
+    private Boolean status;// pagado o no
+    private String type;// VIP
     private Float price;
-    private Integer number;
-    private Boolean presale;
+    private Integer number;//numero de personas
+    private Boolean presale;//descuento al precio
     @Column(name = "created_at")
     private DateFormat createdAt;
     @Column(name = "updated_at")
