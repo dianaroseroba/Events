@@ -5,6 +5,7 @@ import com.tour.events.domain.dto.EventSaveDto;
 import com.tour.events.domain.service.EventDtoService;
 import org.mapstruct.Mapping;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -43,5 +44,14 @@ public class EventDtoController {
 
     public EventSaveDto save(@RequestBody EventSaveDto eventSaveDto){
         return eventDtoService.save(eventSaveDto);
+    }
+    @GetMapping("/{id}/availability")
+    public ResponseEntity<Integer> getEventAvailability(@PathVariable("id") int eventId) {
+        int availability = eventDtoService.calculateTotalAvailableTickets(eventId);
+        if (availability >= 0) {
+            return ResponseEntity.ok(availability);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
     }
 }

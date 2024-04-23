@@ -39,4 +39,15 @@ public class EventDtoService {
     public EventSaveDto save(EventSaveDto eventSaveDto){
         return eventRepo.save(eventSaveDto);
     }
+
+    public int calculateTotalAvailableTickets(int eventId) {
+        Optional<EventDto> optionalEvent = eventRepo.getById(eventId);
+        if (optionalEvent.isPresent()) {
+            EventDto event = optionalEvent.get();
+            return event.getTotalAvailableTickets();
+        } else {
+            return -1; // Manejo de caso en el que el evento no existe
+        }
+    }
+
 }
