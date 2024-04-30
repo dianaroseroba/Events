@@ -33,9 +33,6 @@ public class EventDtoService {
         return eventRepo.getById(eventDtoID);
     }
 
-//    public EventDto save(EventDto eventDto){
-//        return eventRepo.save(eventDto);
-//    }
     public EventSaveDto save(EventSaveDto eventSaveDto){
         return eventRepo.save(eventSaveDto);
     }
